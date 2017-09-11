@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
  *oktay
  */
 @Controller
-public class HomeController {
+public class PageController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	private static final Logger logger = LoggerFactory.getLogger(PageController.class);
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String loadHomePage(Locale locale, Model model) {
