@@ -28,7 +28,7 @@
 	<beans:bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
-		<beans:property name="suffix" value=".xhtml" />
+		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 
 	<context:component-scan base-package="com.oktay" />
@@ -46,7 +46,7 @@
 
 	<!-- Hibernate SessionFactory -->
 	<beans:bean id="sessionFactory"
-		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 		<beans:property name="dataSource" ref="dataSource"></beans:property>
 		
 		<beans:property name="hibernateProperties">
@@ -66,7 +66,7 @@
 
 	<!-- Transaction -->
 	<beans:bean id="transactionManager"
-		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		class="org.springframework.orm.hibernate5.HibernateTransactionManager">
 		<beans:property name="sessionFactory" ref="sessionFactory" />
 	</beans:bean>
 

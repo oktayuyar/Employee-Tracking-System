@@ -33,5 +33,14 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/home/oktay/.m2/repository/org/apache/deltaspike/modules/deltaspike-data-module-api/1.7.2/deltaspike-data-module-api-1.7.2.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="org.apache.deltaspike.modules"/>
+			<attribute name="maven.artifactId" value="deltaspike-data-module-api"/>
+			<attribute name="maven.version" value="1.7.2"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
