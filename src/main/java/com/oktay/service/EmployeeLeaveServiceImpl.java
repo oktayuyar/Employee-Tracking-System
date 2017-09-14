@@ -5,6 +5,9 @@ package com.oktay.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.oktay.dao.EmployeeLeaveDAO;
 import com.oktay.model.EmployeeLeave;
 
 /**
@@ -12,7 +15,10 @@ import com.oktay.model.EmployeeLeave;
  *
  */
 public class EmployeeLeaveServiceImpl implements EmployeeLeaveService{
-
+    
+	@Autowired
+    private EmployeeLeaveDAO employeeLeaveDAO;
+	
 	@Override
 	public void addEmployeeLeave(EmployeeLeave empLeave) {
 		// TODO Auto-generated method stub

@@ -18,5 +18,5 @@ public interface EmployeeService {
 
 	public Employee updateEmployee(Employee employee);
 
-	public Employee getEmployee(int employeeid);
+	public Employee getEmployee(int employeeId);
 }

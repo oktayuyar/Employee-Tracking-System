@@ -6,6 +6,8 @@ package com.oktay.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.oktay.dao.EmployeeDAO;
 import com.oktay.model.Employee;
@@ -14,39 +16,42 @@ import com.oktay.model.Employee;
  * @author oktay
  *
  */
+@Service
+@Transactional
 public class EmployeeServiceImpl implements EmployeeService{
 
     @Autowired
     private EmployeeDAO employeeDAO;
 	
-	@Override
+    @Override
+    @Transactional
 	public void addEmployee(Employee employee) {
-		// TODO Auto-generated method stub
+    	employeeDAO.addEmployee(employee);
 		
 	}
 
-	@Override
+    @Override
+    @Transactional
 	public List<Employee> getAllEmployees() {
-		// TODO Auto-generated method stub
-		return null;
+		return employeeDAO.getAllEmployees();
 	}
 
-	@Override
+    @Override
+    @Transactional
 	public void deleteEmployee(Integer employeeId) {
-		// TODO Auto-generated method stub
-		
+    	employeeDAO.deleteEmployee(employeeId);
 	}
 
-	@Override
+	public Employee getEmployee(int employeeId) {
+    	return employeeDAO.getEmployee(employeeId);
+	}
+
 	public Employee updateEmployee(Employee employee) {
-		// TODO Auto-generated method stub
-		return null;
+    	 return employeeDAO.updateEmployee(employee);
 	}
 
-	@Override
-	public Employee getEmployee(int employeeid) {
-		// TODO Auto-generated method stub
-		return null;
+	public void setEmployeeDAO(EmployeeDAO employeeDAO) {
+		this.employeeDAO = employeeDAO;
 	}
 
 }
