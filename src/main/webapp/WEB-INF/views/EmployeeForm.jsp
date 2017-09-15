@@ -3,6 +3,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
+    
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -10,8 +11,13 @@
 </head>
 <body>
 	<div align="center">
+		<h4>
+			<a href="${pageContext.request.contextPath}/">Home Page</a>
+		</h4>
+	</div>
+	<div align="center">
 		<h1>New/Edit Employee</h1>
-		<form:form action="saveEmployee" method="post"
+		<form:form action="${pageContext.request.contextPath}/saveEmployee" method="post"
 			modelAttribute="employee">
 			<table>
 				<form:hidden path="id" />

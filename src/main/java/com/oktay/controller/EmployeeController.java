@@ -28,6 +28,7 @@ public class EmployeeController {
 	@Autowired
 	private EmployeeService employeeService;
 
+
 	@RequestMapping(value = "/")
 	public ModelAndView listEmployee(ModelAndView model) throws IOException {
 		List<Employee> listEmployee = employeeService.getAllEmployees();
