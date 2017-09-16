@@ -21,6 +21,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	@Autowired
 	private SessionFactory sessionFactory;
 
+
 	public void addEmployee(Employee employee) {
 		sessionFactory.getCurrentSession().saveOrUpdate(employee);
 

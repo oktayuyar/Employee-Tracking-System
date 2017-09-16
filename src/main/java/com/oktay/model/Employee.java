@@ -29,7 +29,7 @@ public class Employee {
     private Integer anualLeaveDay;
 	private String phone;
 	private String e_mail;
-	private String adress;
+	private String address;
 
 	
 	@OneToMany(mappedBy="employee" ,cascade=CascadeType.ALL,fetch=FetchType.EAGER)
@@ -91,12 +91,12 @@ public class Employee {
 		this.e_mail = e_mail;
 	}
 
-	public String getAdress() {
-		return adress;
+	public String getAddress() {
+		return address;
 	}
 
-	public void setAdress(String adress) {
-		this.adress = adress;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 	public Collection<EmployeeLeave> getEmpLeave() {
