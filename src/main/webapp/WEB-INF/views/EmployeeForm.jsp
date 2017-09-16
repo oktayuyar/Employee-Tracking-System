@@ -3,22 +3,37 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
-    
+
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>New/Edit Contact</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>New/Edit Contact</title>
+	
+	<script src="resources/js/bootstrap.min.js"></script>
+	<link href="resources/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-	<div align="center">
-		<h4>
-			<a href="${pageContext.request.contextPath}/">Home Page</a>
-		</h4>
+	<nav class="navbar navbar-inverse">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="${pageContext.request.contextPath}/">Employee
+				Tracking System</a>
+		</div>
+		<div id="navbar" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li class="active"><a
+					href="${pageContext.request.contextPath}/">Home</a></li>
+				<li><a href="${pageContext.request.contextPath}/newEmployee">Add
+						Employee</a></li>
+			</ul>
+		</div>
 	</div>
+	</nav>
+	
 	<div align="center">
 		<h1>New/Edit Employee</h1>
-		<form:form action="${pageContext.request.contextPath}/saveEmployee" method="post"
-			modelAttribute="employee">
+		<form:form action="${pageContext.request.contextPath}/saveEmployee"
+			method="post" modelAttribute="employee">
 			<table>
 				<form:hidden path="id" />
 				<tr>
@@ -43,7 +58,7 @@
 				</tr>
 				<tr>
 					<td>Address:</td>
-					<td><form:input path="adress" /></td>
+					<td><form:input path="address" /></td>
 				</tr>
 				<tr>
 					<td>Telephone:</td>
