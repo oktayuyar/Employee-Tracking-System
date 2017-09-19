@@ -43,34 +43,34 @@
 				<form:hidden path="id" />
 				<tr>
 					<td>Name:</td>
-					<td><form:input path="name" /></td>
+					<td><form:input type="text" class="form-control"  path="name" /></td>
 				</tr>
 				<tr>
 					<td>Surname:</td>
-					<td><form:input path="surname" /></td>
+					<td><form:input type="text" class="form-control"  path="surname" /></td>
 				</tr>
 				<tr>
 					<td>Employee No:</td>
-					<td><form:input path="employeeNo" /></td>
+					<td><form:input type="text" class="form-control"  path="employeeNo" /></td>
 				</tr>
 				<tr>
 					<td>Anual Leave Day:</td>
-					<td><form:input path="anualLeaveDay" /></td>
+					<td><form:input type="text" class="form-control"  path="anualLeaveDay" /></td>
 				</tr>
 				<tr>
 					<td>Email:</td>
-					<td><form:input path="e_mail" /></td>
+					<td><form:input type="text" class="form-control"  path="e_mail" /></td>
 				</tr>
 				<tr>
 					<td>Address:</td>
-					<td><form:input path="address" /></td>
+					<td><form:input type="text" class="form-control"  path="address" /></td>
 				</tr>
 				<tr>
 					<td>Telephone:</td>
-					<td><form:input path="phone" /></td>
+					<td><form:input type="text" class="form-control"  path="phone" /></td>
 				</tr>
 				<tr>
-					<td colspan="2" align="center"><input type="submit"
+					&nbsp;&nbsp;<td colspan="2" align="center"><input type="submit" class="btn btn-danger"
 						value="Save"></td>
 				</tr>
 			</table>
