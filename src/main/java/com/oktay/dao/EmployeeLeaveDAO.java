@@ -15,7 +15,9 @@ public interface EmployeeLeaveDAO {
 
 	public void addEmployeeLeave(EmployeeLeave empLeave);
 
-	public List<EmployeeLeave> getAllEmployeeLEaves();
+	public List<EmployeeLeave> getAllEmployeeLeaves(Integer empId);
+	
+	public void deleteEmployeeLeave(Integer empLeaveId);
 
 	public EmployeeLeave updateEmployeeLeave(EmployeeLeave empLeave);
 

@@ -14,6 +14,7 @@
 			<security:intercept-url pattern="/editEmployee" access="isAuthenticated()" />
 			<security:intercept-url pattern="/saveEmployee" access="isAuthenticated()" />
 			<security:intercept-url pattern="/deleteEmployee" access="isAuthenticated()" />
+			<security:intercept-url pattern="/employeeDetail" access="isAuthenticated()" />
 			<security:form-login/>
 		</security:http>
 		

@@ -25,7 +25,7 @@ public class EmployeeLeave {
 	@GeneratedValue(generator = "LEA_GEN")
 	private int id;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "emp_id")
 	private Employee employee;
 	
